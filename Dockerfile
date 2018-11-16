@@ -30,9 +30,9 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.23.1/docker-co
 RUN usermod -aG docker jenkins
 
 # add this if you need to become root in the live image for some reason
-# RUN apt-get -y install sudo
+RUN apt-get -y install sudo
 #
-# COPY sudoers /etc/sudoers
+COPY sudoers /etc/sudoers
 
 USER jenkins
 

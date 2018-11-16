@@ -1,4 +1,8 @@
 To run this image:
 
-docker run -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/jenk:/var/jenkins_home --name jenkinsci jenkdock
+sh -v ./run.sh
+
+It seems that on reboot /var/run/docker.sock needs to have it's permissions opened back up again. ;-(
+
+
 
